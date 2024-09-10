@@ -6,30 +6,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val userRepository = UserRepository()
 
-        val usersCollection = db.collection("users")
-        // testing
-        usersCollection.get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    val username = document.getString("username")
-                    val password = document.getString("password")
+        lifecycleScope.launch {
+            userRepository.getUsers()
 
-                    Log.d("Firestore", "Username: $username, Password: $password")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.w("Firestore", "Error getting documents: ", exception)
-            }
+        }
     }
+
 }
