@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "265857803042",
+    "project_id": "kotlindb-ca314",
+    "storage_bucket": "kotlindb-ca314.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265857803042:android:84508301255a91e37e3b7b",
+        "android_client_info": {
+          "package_name": "com.example.mobilt_java24_alexander_jansson_lifecycle_v4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5wpnBSkVJ7Op3A8mc7_jaNZPXFm4iHk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
