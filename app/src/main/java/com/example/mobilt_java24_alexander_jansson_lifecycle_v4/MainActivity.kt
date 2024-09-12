@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val userRepository = UserRepository()
+        val HomepageViewModel = HomepageViewModel(userRepository)
 
         lifecycleScope.launch {
-            userRepository.getUsers()
-
+           // userRepository.getUsers()
+            HomepageViewModel.checkUser("username", "password")
         }
     }
 
