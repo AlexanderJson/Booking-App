@@ -11,8 +11,11 @@
     <ImageView
             android:layout_width="150dp"
             android:layout_height="144dp"
+            android:contentDescription="@string/image_of_abstract_shapes"
             tools:srcCompat="@drawable/logo"
             android:id="@+id/imageView3"
+            android:layout_gravity="center"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="477dp"
             app:layout_constraintTop_toTopOf="parent"

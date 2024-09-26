@@ -15,6 +15,11 @@
             android:title="@string/Profile"
             android:icon="@drawable/profilelogo"
             />
+    <item
+            android:id="@+id/nav_logout"
+            android:title="@string/Logout"
+            android:icon="@drawable/profilelogo"
+            />
 
 </menu>
 

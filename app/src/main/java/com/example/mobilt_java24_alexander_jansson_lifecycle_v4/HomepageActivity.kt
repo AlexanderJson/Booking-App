@@ -13,40 +13,16 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 
 
-class HomepageActivity : AppCompatActivity() {
+class HomepageActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupBtmNavbar()
+
         val text = findViewById<TextView>(R.id.textView2)
-        val bottomNavbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
-        bottomNavbar.setOnItemSelectedListener{ item ->
-            when (item.itemId){
-                R.id.nav_home -> {
-                    val intent = Intent(this, HomepageActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.nav_profile -> {
-                    val intent = Intent(this, ProfileActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.nav_schedule -> {
-                    val intent = Intent(this, CalendarActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                else -> {
-                    false
-                }
-            }
-
-
-        }
-
+    }}
         //val calendarBtn = findViewById<Button>(R.id.calendarBtn)
 
         /*
@@ -76,5 +52,5 @@ class HomepageActivity : AppCompatActivity() {
 
 
         */
-}}
+
 

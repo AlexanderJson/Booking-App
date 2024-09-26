@@ -9,4 +9,13 @@
     <string name="Home">Home</string>
     <string name="Schedule">Schedule</string>
     <string name="Profile">Profile\n</string>
+    <string name="image_of_abstract_shapes">Image of abstract shapes</string>
+    <string name="change">Change</string>
+    <string name="can_work">Can work</string>
+    <string name="my_schedule">My Schedule</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="see_team">See team</string>
+    <string name="Logout">Logout</string>
+    <string name="schedule">Schedule</string>
+    <string name="tasks">Tasks</string>
 </resources>

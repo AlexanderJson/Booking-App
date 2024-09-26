@@ -4,14 +4,74 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-    <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2"
+    <TextView
+            android:text="@string/my_schedule"
+            android:layout_width="223dp"
+            android:layout_height="0dp"
+            android:id="@+id/textView2"
+            android:textSize="30sp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="481dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="220dp"
-            android:layout_marginStart="149dp" />
+            android:layout_marginStart="16dp" />
+    <Button
+            android:text="@string/edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editProfileBtn"
+            style="@style/ButtonStyles"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.628"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+            android:text="@string/see_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/teamBtn"
+            style="@style/ButtonStyles"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/zeal"
+            android:id="@+id/bottomNavigationView"
+            app:menu="@menu/btm_nav_menu"
+            app:itemIconSize="@android:dimen/app_icon_size"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline"
+            app:layout_constraintGuide_begin="20dp"
+            android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline2"
+            app:layout_constraintGuide_begin="20dp"
+            android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline3"
+            app:layout_constraintGuide_begin="20dp"
+            android:orientation="vertical" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

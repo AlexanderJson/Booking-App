@@ -8,20 +8,20 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 
-class CalendarActivity: AppCompatActivity() {
+class CalendarActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
-        val text = findViewById<TextView>(R.id.testview)
-        val changeAvailableBtn = findViewById<Button>(R.id.changeAvailableBtn)
+        setupBtmNavbar()
+
         val setAvailableBtn = findViewById<Button>(R.id.setAvailableBtn)
 
+        //metod
         setAvailableBtn.setOnClickListener(View.OnClickListener {
             val datePicker = MaterialDatePicker.Builder.datePicker().build()
             datePicker.show(supportFragmentManager, "DATE_PICKER")
             datePicker.addOnPositiveButtonClickListener {
-                text.text = datePicker.headerText
                 }
             }
         )

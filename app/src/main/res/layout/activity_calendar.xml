@@ -5,47 +5,58 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <CalendarView
-            android:layout_width="0dp"
+    <TextView
+            android:text="@string/my_schedule"
+            android:layout_width="223dp"
             android:layout_height="0dp"
-            android:id="@+id/calendarView"
-            android:layout_marginTop="160dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/textView2"
+            android:textSize="30sp"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="481dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            app:layout_constraintHorizontal_bias="0.0"
-            android:layout_marginBottom="97dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView" />
+            android:layout_marginStart="16dp" />
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/zeal"
+            android:id="@+id/bottomNavigationView"
+            app:menu="@menu/btm_nav_menu"
+            app:itemIconSize="@android:dimen/app_icon_size"
+            app:layout_constraintTop_toBottomOf="@+id/setAvailableBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
-            android:text="Change"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/changeAvailableBtn"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintEnd_toStartOf="@+id/setAvailableBtn"
-            android:layout_marginEnd="18dp" />
-
-    <Button
-            android:text="Can work"
+            android:text="@string/schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/setAvailableBtn"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            android:layout_marginEnd="28dp"
-            app:layout_constraintEnd_toEndOf="@+id/calendarView" />
+            style="@style/ButtonStyles"
+            android:layout_marginTop="518dp"
+            app:layout_constraintEnd_toStartOf="@+id/tasksBtn"
+            android:layout_marginBottom="42dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="49dp"
+            android:layout_marginEnd="40dp" />
 
-    <TextView
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/testview"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="72dp"
-            app:layout_constraintEnd_toEndOf="@+id/changeAvailableBtn" />
+    <Button
+            android:text="@string/tasks"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:id="@+id/tasksBtn"
+            style="@style/ButtonStyles"
+            app:layout_constraintBaseline_toBaselineOf="@+id/setAvailableBtn"
+            app:layout_constraintStart_toEndOf="@+id/setAvailableBtn"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
