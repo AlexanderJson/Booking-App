@@ -16,6 +16,7 @@ class CalendarActivity : BaseActivity() {
         setupBtmNavbar()
 
         val setAvailableBtn = findViewById<Button>(R.id.setAvailableBtn)
+        // lägg till floating button för lägga till
 
         //metod
         setAvailableBtn.setOnClickListener(View.OnClickListener {

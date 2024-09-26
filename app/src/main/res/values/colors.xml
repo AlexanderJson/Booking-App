@@ -4,4 +4,22 @@
     <color name="white">#FFFFFFFF</color>
     <color name="snow">#FFFEFA</color>
     <color name="zeal">#070A18</color>
+    <color name="date">#111D4A</color>
+
 </resources>
+
+
+<!-- Header color: app:headerColor="[color]"
+Header label color: app:headerLabelColor="[color]"
+Previous button image resource: app:previousButtonSrc="[drawable]"
+Forward button image resource: app:forwardButtonSrc="[drawable]"
+Abbreviations bar color: app:abbreviationsBarColor="[color]"
+Abbreviations labels color: app:abbreviationsLabelsColor="[color]"
+Calendar pages color: app:pagesColor="[color]"
+Selection color in picker mode: app:selectionColor="[color]"
+Selection label color in picker mode: app:selectionLabelColor="[color]"
+Days labels color: app:daysLabelsColor="[color]"
+Color of visible days labels from previous and next month page: app:anotherMonthsDaysLabelsColor="[color]"
+Disabled days labels color: app:disabledDaysLabelsColor="[color]"
+    Highlighted days labels color: app:highlightedDaysLabelsColor="[color]"
+Today label color: app:todayLabelColor="[color]"-->

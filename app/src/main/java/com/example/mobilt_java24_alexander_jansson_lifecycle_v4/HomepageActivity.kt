@@ -22,6 +22,8 @@ class HomepageActivity : BaseActivity() {
 
         val text = findViewById<TextView>(R.id.textView2)
 
+
+        // lägg tasks här, hämta nuvarande vecka från db/kalenderS
     }}
         //val calendarBtn = findViewById<Button>(R.id.calendarBtn)
 

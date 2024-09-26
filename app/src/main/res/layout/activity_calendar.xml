@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -12,41 +13,50 @@
             android:id="@+id/textView2"
             android:textSize="30sp"
             android:layout_marginTop="42dp"
-            android:layout_marginBottom="481dp"
+            android:layout_marginBottom="395dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp" />
 
 
+    <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            app:headerColor="@color/date"
+            app:selectionColor="@color/date"
+            app:todayLabelColor="@color/date"
+            app:selectionLabelColor="@color/date"
+            app:daysLabelsColor="@color/date"
+            app:anotherMonthsDaysLabelsColor="@color/date"
+            app:disabledDaysLabelsColor="@color/date"
+            app:highlightedDaysLabelsColor="@color/date"
+            app:type="one_day_picker"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/setAvailableBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+    </com.applandeo.materialcalendarview.CalendarView>
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/zeal"
+            app:iconTint="@color/white"
             android:id="@+id/bottomNavigationView"
             app:menu="@menu/btm_nav_menu"
             app:itemIconSize="@android:dimen/app_icon_size"
-            app:layout_constraintTop_toBottomOf="@+id/setAvailableBtn"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:layout_marginBottom="6dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    <Button
-            android:text="@string/schedule"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/setAvailableBtn"
-            style="@style/ButtonStyles"
-            android:layout_marginTop="518dp"
-            app:layout_constraintEnd_toStartOf="@+id/tasksBtn"
-            android:layout_marginBottom="42dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="49dp"
-            android:layout_marginEnd="40dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
 
     <Button
             android:text="@string/tasks"
@@ -54,9 +64,32 @@
             android:layout_height="67dp"
             android:id="@+id/tasksBtn"
             style="@style/ButtonStyles"
-            app:layout_constraintBaseline_toBaselineOf="@+id/setAvailableBtn"
-            app:layout_constraintStart_toEndOf="@+id/setAvailableBtn"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintEnd_toStartOf="@+id/setAvailableBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="87dp"
+            android:layout_marginEnd="33dp" />
+
+    <Button
+            android:text="@string/schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/setAvailableBtn"
+            style="@style/ButtonStyles"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintStart_toEndOf="@+id/tasksBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="170dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            android:layout_marginEnd="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline4"
+            app:layout_constraintGuide_begin="20dp"
+            android:orientation="vertical" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
