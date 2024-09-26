@@ -43,11 +43,10 @@ class UserRepository {
         try {
             val result = usersCollection.get().await()
             for (document in result.documents) {
-                val retrievedUsername = document.getString("username") ?: "Guest"
+                val retrievedUsername = document.getString("username") ?: ""
                 val retrievedPassword = document.getString("password") ?: ""
                 val user = Users(retrievedUsername, retrievedPassword)
                 oneUserList.add(user)
-                Log.d("UserRepository", "Username: $retrievedUsername")
             }
         } catch (exception: Exception) {
             Log.e("getUser", "Could not fetch user", exception)

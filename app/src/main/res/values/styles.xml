@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonStyles" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/zeal</item>
+        <item name="android:textColor">@color/snow</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="rippleColor">#2B98C6</item>
+    </style>
+</resources>

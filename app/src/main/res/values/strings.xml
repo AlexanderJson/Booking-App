@@ -5,4 +5,8 @@
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="calendar_button">calendar_button</string>
+    <string name="Register">Register\n</string>
+    <string name="Home">Home</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Profile">Profile\n</string>
 </resources>

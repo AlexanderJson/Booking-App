@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
@@ -21,8 +22,26 @@ class LoginActivity : AppCompatActivity() {
         val usernameField = findViewById<EditText>(R.id.username_input)
         val passwordField = findViewById<EditText>(R.id.password_input)
         val loginBtn = findViewById<Button>(R.id.login_button)
+        val registerBtn = findViewById<Button>(R.id.register_btn)
 
 
+        fun showRegisterDialog(){
+            val dialogView = layoutInflater.inflate(R.layout.dialog_register, null)
+            val builder = AlertDialog.Builder(this)
+                .setView(dialogView)
+                .setCancelable(true)
+            val dialog = builder.create()
+            dialog.show()
+        }
+
+        //register
+        registerBtn.setOnClickListener(){
+            showRegisterDialog()
+        }
+
+
+
+        //login
         loginBtn.setOnClickListener(){
                 val usernameInput = usernameField.text.toString()
                 val passwordInput = passwordField.text.toString()
@@ -45,7 +64,6 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
-
 
 
 

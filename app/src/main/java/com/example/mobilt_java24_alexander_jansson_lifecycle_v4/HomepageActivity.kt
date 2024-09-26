@@ -1,7 +1,9 @@
 package com.example.mobilt_java24_alexander_jansson_lifecycle_v4
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,5 +18,12 @@ class HomepageActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val text = findViewById<TextView>(R.id.textView2)
 
+        //val calendarBtn = findViewById<Button>(R.id.calendarBtn)
+
+        /*
+        calendarBtn.setOnClickListener(View.OnClickListener {
+            intent = Intent(this, CalendarActivity::class.java)
+            startActivity(intent)
+        })*/
 }}
 
